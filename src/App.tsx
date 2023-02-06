@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import SearchBar from './components/SearchBar/SearchBar'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [searchDev, setSearchDev] = useState('')
 
   return (
-    <div className="App">
+    <div className="bg-blue-600 flex flex-col justify-center">
+      <SearchBar setSearchDev={setSearchDev}/>
       Hello World
+
     </div>
   )
 }
