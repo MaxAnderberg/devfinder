@@ -7,7 +7,7 @@ function App() {
   const [searchDev, setSearchDev] = useState('')
 
   return (
-    <div className="bg-blue-600 flex flex-col justify-center items-center h-screen w-full">
+    <div className="bg-slate-200 flex flex-col justify-center items-center h-screen w-full">
       <div className='w-full flex justify-between'>
         <p>Devfinder</p> 
         <div>
