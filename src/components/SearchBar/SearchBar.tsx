@@ -1,10 +1,10 @@
 const SearchBar = (props:any) => {
 return (
-        <div>
+        <div className="flex">
             <form>
-                <input type="text" placeholder="Search for a developer" />
+                <input className="rounded-lg p-4" type="text" placeholder="Search for a developer" />
+                <button>Search</button>
             </form>
-            The Search Bar component
         </div>
     )
 }

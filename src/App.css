@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
