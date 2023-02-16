@@ -5,4 +5,8 @@
 #root {
   display: flex;
   justify-content: center;
+  background-color: #141D2F;
+  /* background-color: #4B6A9B; */
+  /* color below is the infomratiom container color */
+  /* background-color: #1E2A47; */
 }

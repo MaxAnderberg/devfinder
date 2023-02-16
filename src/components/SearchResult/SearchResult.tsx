@@ -10,10 +10,10 @@ const SearchResult = () => {
     bio: "There was once a padawan..."
   }
   return (
-    <div className="bg-slate-100 flex flex-col mt-6">
+    <div className="bg-[#1E2A47] flex flex-col mt-6 w-full items-center">
       <p>{developer.userName}</p>
       {developer.bio}
-      <div className="bg-slate-200 grid grid-rows-2 grid-cols-2 justify-center rounded-lg">
+      <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg w-1/2">
           <p>Repos</p>
           <p>Followers</p>
           <p>Followers</p>
