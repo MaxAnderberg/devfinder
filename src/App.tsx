@@ -12,9 +12,9 @@ function App() {
     <div className="bg-slate-200 flex flex-col justify-center items-center h-screen w-3/4">
       <div className='w-full flex justify-between'>
         <p className='lowercase text-white font-bold text-2xl'>Devfinder</p> 
-        <div className='flex'>
-          <img src={LightIcon} alt="" />
+        <div className='flex mr-4 mb-12'>
           <span className='uppercase text-white font-bold'>Light</span> 
+          <img src={LightIcon} alt="" />
         </div>
       </div>
       <SearchBar setSearchDev={setSearchDev}/>
