@@ -11,12 +11,12 @@ const SearchResult = () => {
     bio: "There was once a padawan..."
   }
   return (
-    <div className="grid grid-cols-4 w-full">
-      <img src={DummyIcon} alt="" className='w-1/2 m-auto'/>
-      <div className="bg-[#1E2A47] flex flex-col mt-6 w-full items-center col-span-3 text-white">
+    <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
+      <img src={DummyIcon} alt="" className='w-1/2 mx-auto'/>
+      <div className=" flex flex-col w-full items-center col-span-4 text-white">
         <p>{developer.userName}</p>
         {developer.bio}
-        <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg w-1/2">
+        <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg  p-6 w-full">
             <p>Repos</p>
             <p>Followers</p>
             <p>Followers</p>
