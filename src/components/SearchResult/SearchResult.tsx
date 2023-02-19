@@ -14,9 +14,17 @@ const SearchResult = () => {
     <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
       <img src={DummyIcon} alt="" className='w-1/2 mx-auto'/>
       <div className=" flex flex-col w-full items-center col-span-4 text-white">
-        <p>{developer.userName}</p>
-        {developer.bio}
-        <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg  p-6 w-full">
+        <div className='flex justify-between w-full'>
+          <div className='text-left'>
+          <p className='text-bold'>{developer.userName}</p>
+          <p className='color-blue mt-2'>@Octocat</p>
+          <p className='mt-6'>{developer.bio}</p>
+          </div>
+          <div className='text-right'>
+            <p>Joined 25 Jan 2011</p>
+          </div>
+        </div>
+        <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg mt-8 p-6 w-full">
             <p>Repos</p>
             <p>Followers</p>
             <p>Followers</p>
