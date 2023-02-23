@@ -1,5 +1,5 @@
 export const GithubAPI = () => {
-    const baseURL: string = 'https://api.github.com/users/';
+    const baseURL: string = 'https://api.github.com/users/maxanderberg';
 
     const get = async (user: string) => {
         const response = await fetch(baseURL + user);
