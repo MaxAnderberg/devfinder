@@ -1,7 +1,12 @@
+import Location from "../../assets/icon-location.svg";
+import Blog from "../../assets/icon-website.svg";
+import Twitter from "../../assets/icon-twitter.svg";
+import Company from "../../assets/icon-company.svg";
+
 const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
 
-  const formatDate = (dateString: any) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     const formattedDate = date.toLocaleDateString('en-GB', {
       day: 'numeric',
@@ -51,31 +56,43 @@ const SearchResult = (props: any) => {
           <div>
           </div>
         </div>
-        <div className="grid grid-cols-2 mt-8">
-          {
-            props.developerResult.location !== null ?
-              (<p>{props.developerResult.location}</p>)
-              :
-              (<p className="text-slate-600">{notAvailable}</p>)
-          }
-          {
-            props.developerResult.twitter_username !== null ?
-              (<p>{props.developerResult.twitter_username}</p>)
-              :
-              (<p className="text-slate-600">{notAvailable}</p>)
-          }
-          {
-            props.developerResult.blog !== null ?
-              (<p>{props.developerResult.blog}</p>)
-              :
-              (<p className="text-slate-600">{notAvailable}</p>)
-          }
-          {
-            props.developerResult.twitter_username !== null ?
-              (<p>{props.developerResult.login}</p>)
-              :
-              (<p className="text-slate-600">{notAvailable}</p>)
-          }
+        <div className="grid grid-cols-2 gap-4 mt-8 text-left">
+          <div className="flex">
+            <img src={Location} />
+            {
+              props.developerResult.location !== null ?
+                (<p>{props.developerResult.location}</p>)
+                :
+                (<p className="text-slate-600">{notAvailable}</p>)
+            }
+          </div>
+          <div className="flex">
+            <img src={Twitter} />
+            {
+              props.developerResult.twitter_username !== null ?
+                (<p>{props.developerResult.twitter_username}</p>)
+                :
+                (<p className="text-slate-600">{notAvailable}</p>)
+            }
+          </div>
+          <div className="flex">
+            <img src={Blog} />
+            {
+              props.developerResult.blog !== null ?
+                (<p>{props.developerResult.blog}</p>)
+                :
+                (<p className="text-slate-600">{notAvailable}</p>)
+            }
+          </div>
+          <div className="flex">
+            <img src={Company} />
+            {
+              props.developerResult.company !== null ?
+                (<p>{props.developerResult.company}</p>)
+                :
+                (<p className="text-slate-600">{notAvailable}</p>)
+            }
+          </div>
         </div>
       </div>
     </div>
