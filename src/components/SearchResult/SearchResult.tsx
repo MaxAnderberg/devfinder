@@ -1,6 +1,17 @@
 const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
 
+  const formatDate = (dateString: any) => {
+    const date = new Date(dateString)
+    const formattedDate = date.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric'
+    });
+
+    return formattedDate;
+  }
+
   return (
     <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
       <img
@@ -21,7 +32,7 @@ const SearchResult = (props: any) => {
             }</p>
           </div>
           <div className="text-right">
-            <p>Joined {props.developerResult.created_at}</p>
+            <p>Joined {formatDate(props.developerResult.created_at)}</p>
           </div>
         </div>
         <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-center rounded-lg mt-8 p-6 w-full">
