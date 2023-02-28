@@ -1,48 +1,74 @@
-import DummyIcon from '../../assets/react.svg'
-
-const SearchResult = (props:any) => {
-  const developer = {
-    userName: "maxanderberg",
-    repositories: 14,
-    followers: 20,
-    following: 5,
-    location: "San Francisco",
-    email: "test@email.com",
-    twitter: "octoman",
-    bio: "There was once a padawan..."
-  }
+const SearchResult = (props: any) => {
+  const notAvailable = "Not Available";
 
   return (
     <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
-      <img src={props.developerResult.avatar_url} alt="" className='w-1/2 mx-auto'/>
+      <img
+        src={props.developerResult.avatar_url}
+        alt=""
+        className="w-1/2 mx-auto rounded-full"
+      />
       <div className=" flex flex-col w-full items-center col-span-4 text-white">
-        <div className='flex justify-between w-full'>
-          <div className='text-left'>
-          <p className='text-bold'>{props.developerResult.login}</p>
-          <p className='color-blue mt-2'>@Octocat</p>
-          <p className='mt-6'>{developer.bio}</p>
+        <div className="flex justify-between w-full">
+          <div className="text-left">
+            <p className="text-bold">{props.developerResult.name}</p>
+            <p className="color-blue mt-2 text-blue-600">@{props.developerResult.login}</p>
+            <p className="mt-6">{
+              props.developerResult.bio !== null ?
+                <p>(props.developerResult.bio)</p>
+                :
+                (<p>This profile has no bio</p>)
+            }</p>
           </div>
-          <div className='text-right'>
-            <p>{props.developerResult.created_at}</p>
+          <div className="text-right">
+            <p>Joined {props.developerResult.created_at}</p>
           </div>
         </div>
-        <div className="bg-[#141D2F] grid grid-rows-2 grid-cols-2 justify-center rounded-lg mt-8 p-6 w-full">
+        <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-center rounded-lg mt-8 p-6 w-full">
+          <div>
             <p>Repos</p>
+            <p className="font-bold">{props.developerResult.public_repos}</p>
+          </div>
+          <div>
             <p>Followers</p>
-            <p>Followers</p>
-            <p>{developer.repositories}</p>
-            <p>{developer.followers}</p>
-            <p>{developer.following}</p>
+            <p className="font-bold">{props.developerResult.followers}</p>
+          </div>
+          <div>
+            <p>Following</p>
+            <p className="font-bold">{props.developerResult.following}</p>
+          </div>
+          <div>
+          </div>
         </div>
-        <div>
-          {developer.location}
-          {developer.twitter}
-          {developer.email}
+        <div className="grid grid-cols-2 mt-8">
+          {
+            props.developerResult.location !== null ?
+              (<p>{props.developerResult.location}</p>)
+              :
+              (<p className="text-slate-600">{notAvailable}</p>)
+          }
+          {
+            props.developerResult.twitter_username !== null ?
+              (<p>{props.developerResult.twitter_username}</p>)
+              :
+              (<p className="text-slate-600">{notAvailable}</p>)
+          }
+          {
+            props.developerResult.blog !== null ?
+              (<p>{props.developerResult.blog}</p>)
+              :
+              (<p className="text-slate-600">{notAvailable}</p>)
+          }
+          {
+            props.developerResult.twitter_username !== null ?
+              (<p>{props.developerResult.login}</p>)
+              :
+              (<p className="text-slate-600">{notAvailable}</p>)
+          }
         </div>
+      </div>
     </div>
-   
-    </div>
-  )
-}
+  );
+};
 
-export default SearchResult
+export default SearchResult;
