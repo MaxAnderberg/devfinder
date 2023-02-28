@@ -33,7 +33,7 @@ function App() {
   }, [searchDeveloperHandler]);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-3/4">
+    <div className="flex flex-col justify-center items-center h-screen w-4/6">
       <div className="w-full flex justify-between">
         <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
         <div className="flex mr-4 mb-12">
