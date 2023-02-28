@@ -7,7 +7,7 @@ const SearchBar = (props: any) => {
         <img src={SearchIcon} className='m-auto' alt="a magnifyier" />
         <input className="rounded-lg ml-2 p-4 border-0 bg-transparent w-full placeholder-white" type="text" placeholder="Search GitHub username..." />
       </form>
-      <button className="bg-blue-700 px-6 rounded-xl text-white m-2 font-bold">Search</button>
+      <button className="bg-primary-blue px-6 rounded-xl text-white m-2 font-bold">Search</button>
     </div>
   )
 }
