@@ -5,7 +5,7 @@ const SearchResult = (props: any) => {
     <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
       <img
         src={props.developerResult.avatar_url}
-        alt=""
+        alt="profile picture"
         className="w-1/2 mx-auto rounded-full"
       />
       <div className=" flex flex-col w-full items-center col-span-4 text-white">
