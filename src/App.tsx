@@ -17,6 +17,10 @@ function App() {
   const searchDeveloperHandler = useCallback(async () => {
     try {
       setError(null);
+      if (developer.length === 0) {
+        setHasSearch(false);
+        return;
+      }
       const response = await fetch(baseURL + developer);
       if (!response.ok) {
         setHasSearch(false);
