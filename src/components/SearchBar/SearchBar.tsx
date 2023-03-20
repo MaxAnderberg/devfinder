@@ -2,9 +2,6 @@ import { useState } from "react";
 import SearchIcon from "../../assets/icon-search.svg";
 
 const SearchBar = (props: any) => {
-  const [search, setSearch] = useState("");
-  const [foundSearch, setHasSearch] = useState(false);
-
   return (
     <div className="flex justify-between bg-[#1E2A47] w-full rounded-2xl">
       <form className="flex m-2 w-1/2 ml-6">
@@ -15,7 +12,7 @@ const SearchBar = (props: any) => {
           placeholder="Search GitHub username..."
         />
       </form>
-      {foundSearch ? (
+      {props.foundSearch ? (
         <p></p>
       ) : (
         <div className="flex justify-end items-center w-1/4">
