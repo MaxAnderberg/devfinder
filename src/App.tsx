@@ -30,7 +30,7 @@ function App() {
     } catch (error: any) {
       setError(error.message);
     }
-  }, []);
+  }, [developer]);
 
   useEffect(() => {
     searchDeveloperHandler();
