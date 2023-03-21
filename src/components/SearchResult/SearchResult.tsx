@@ -58,7 +58,7 @@ const SearchResult = (props: any) => {
             <p className="font-bold">{props.developerResult.following}</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 mt-6 text-left">
+        <div className="grid grid-cols-2 gap-x-20 gap-y-4 mt-6 text-left w-full">
           <div className="flex">
             <Location className="w-6 h-6 mr-2 " />
             {props.developerResult.location !== null ? (
