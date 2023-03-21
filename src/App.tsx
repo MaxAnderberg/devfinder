@@ -11,7 +11,7 @@ function App() {
 
   const baseURL: string = "https://api.github.com/users/";
 
-  const [developer, setDeveloper] = useState("");
+  const [developer, setDeveloper] = useState("octocat");
   const [error, setError] = useState(null);
 
   const searchDeveloperHandler = useCallback(async () => {
