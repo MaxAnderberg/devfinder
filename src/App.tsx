@@ -19,11 +19,10 @@ function App() {
       setError(null);
       if (developer.length === 0) {
         setHasSearch(false);
-        return;
+        throw new Error("Please enter a valid username");
       }
       const response = await fetch(baseURL + developer);
       if (!response.ok) {
-        setHasSearch(false);
         throw new Error("Something went wrong!");
       }
 
@@ -31,6 +30,7 @@ function App() {
 
       setDeveloper(data);
       setHasSearch(true);
+      console.log("hello lol 3");
     } catch (error: any) {
       setError(error.message);
     }
