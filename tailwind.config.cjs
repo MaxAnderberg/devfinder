@@ -4,8 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     backgroundColor: {
-      'primary-blue': '#0079FF',
-    }
+      "primary-blue": "#141D2F",
+      "button-blue": "#0079FF",
+      "button-hover": "#60ABFF",
+    },
   },
   plugins: [],
-}
+};
