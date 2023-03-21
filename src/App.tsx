@@ -30,7 +30,6 @@ function App() {
 
       setDeveloper(data);
       setHasSearch(true);
-      console.log("hello lol 3");
     } catch (error: any) {
       setError(error.message);
     }
