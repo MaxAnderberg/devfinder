@@ -40,8 +40,8 @@ function App() {
   }, [searchDeveloperHandler]);
 
   return (
-    <div className="bg-primary-blue flex justify-center max-w-screen">
-      <div className="flex flex-col justify-center items-center h-screen w-4/6 bg-primary-blue max-w-screen">
+    <div className="bg-primary-blue flex justify-center">
+      <div className="flex flex-col justify-center items-center h-screen w-3/6 bg-primary-blue max-w-screen">
         <div className="w-full flex justify-between">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
           <div className="flex mr-4 mb-12">
