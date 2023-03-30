@@ -2,6 +2,8 @@ import { ReactComponent as Location } from "../../assets/icon-location.svg";
 import { ReactComponent as Blog } from "../../assets/icon-website.svg";
 import { ReactComponent as Twitter } from "../../assets/icon-twitter.svg";
 import { ReactComponent as Company } from "../../assets/icon-company.svg";
+import { ReactSVG } from "react-svg";
+import twitter from "../../assets/icon-twitter.svg";
 import "./SearchResult.css";
 
 const SearchResult = (props: any) => {
@@ -60,15 +62,27 @@ const SearchResult = (props: any) => {
         </div>
         <div className="grid grid-cols-2 gap-x-20 gap-y-4 mt-6 text-left w-full">
           <div className="flex">
-            <Location className="w-6 h-6 mr-2 " />
+            <Location
+              className={`w-6 h-6 mr-2 text-red-500 ${
+                props.developerResult.location === null
+                  ? "text-[#697C9A]"
+                  : "text-white"
+              }`}
+            />
             {props.developerResult.location !== null ? (
               <p>{props.developerResult.location}</p>
             ) : (
-              <p className="text-slate-600">{notAvailable}</p>
+              <p className="text-white">{notAvailable}</p>
             )}
           </div>
           <div className="flex">
-            <Twitter className="h-6 w-6 mr-2" />
+            <Twitter
+              className={`h-6 w-6 mr-2 text-white-500 ${
+                props.developerResult.twitter_username === null
+                  ? "text-[#697C9A]"
+                  : "text-white"
+              }`}
+            />
             {props.developerResult.twitter_username !== null ? (
               <p>{props.developerResult.twitter_username}</p>
             ) : (
@@ -76,7 +90,13 @@ const SearchResult = (props: any) => {
             )}
           </div>
           <div className="flex">
-            <Blog className="w-6 h-6 mr-2" />
+            <Blog
+              className={`w-6 h-6 mr-2 text-gray-500 ${
+                props.developerResult.blog === null
+                  ? "text-[#697C9A]"
+                  : "text-white"
+              }`}
+            />
             {props.developerResult.blog !== null ? (
               <p>{props.developerResult.blog}</p>
             ) : (
@@ -84,7 +104,13 @@ const SearchResult = (props: any) => {
             )}
           </div>
           <div className="flex">
-            <Company className="w-6 h-6 mr-2" />
+            <Company
+              className={`w-6 h-6 mr-2 text-pink-500 ${
+                props.developerResult.company === null
+                  ? "text-[#697C9A]"
+                  : "text-white"
+              }`}
+            />
             {props.developerResult.company !== null ? (
               <p>{props.developerResult.company}</p>
             ) : (
