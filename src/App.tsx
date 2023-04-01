@@ -44,11 +44,11 @@ function App() {
       <div className="flex flex-col justify-center items-center h-screen w-3/6 bg-primary-blue max-w-screen">
         <div className="w-[730px] flex justify-between">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
-          <div className="flex  mb-12">
-            <span className="uppercase text-white font-bold tracking-widest mr-2">
+          <div className="flex mb-12 text-white hover:text-blue-500 cursor-pointer">
+            <span className="uppercase font-bold tracking-widest mr-2">
               Light
             </span>
-            <ThemeIcon className="w-6 h-6 ml-2 text-white" />
+            <ThemeIcon className="w-6 h-6 ml-2 " />
           </div>
         </div>
         <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
