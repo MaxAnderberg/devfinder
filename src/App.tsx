@@ -44,7 +44,7 @@ function App() {
       <div className="flex flex-col justify-center items-center h-screen w-3/6 bg-primary-blue max-w-screen">
         <div className="w-[730px] flex justify-between">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
-          <div className="flex mb-12 text-white hover:text-blue-500 cursor-pointer">
+          <div className="flex mb-12 text-white hover:text-[#90A4D4] cursor-pointer">
             <span className="uppercase font-bold tracking-widest mr-2">
               Light
             </span>
