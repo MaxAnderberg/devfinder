@@ -16,12 +16,16 @@ const SearchBar = (props: any) => {
   };
 
   return (
-    <div className="flex justify-between bg-[#1E2A47] w-full rounded-2xl">
+    <div className="flex justify-between bg-[#1E2A47] w-[730px] rounded-2xl">
       <form
         onSubmit={handleSearch}
         className="flex flex-row items-center justify-between ml-6 w-full"
       >
-        <img src={SearchIcon} className="m-auto" alt="a magnifyier" />
+        <img
+          src={SearchIcon}
+          className="m-auto text-[#0079FF]"
+          alt="a magnifyier"
+        />
         <input
           className="rounded-lg ml-2 p-4 border-0  w-full placeholder-white bg-[#1E2A47] text-white focus:ring-0 focus:outline-none"
           type="text"

@@ -21,13 +21,16 @@ const SearchResult = (props: any) => {
   };
 
   return (
-    <div className="grid grid-cols-5 w-full bg-[#1E2A47] mt-8 rounded-xl p-8">
-      <img
-        src={props.developerResult.avatar_url}
-        alt="puse-use-rofile picture"
-        className="w-1/2 mx-auto rounded-full"
-      />
-      <div className="flex flex-col w-full items-center col-span-4 text-white">
+    <div className="flex w-[730px] bg-[#1E2A47] mt-8 rounded-xl p-12">
+      <div className="mr-8">
+        <img
+          src={props.developerResult.avatar_url}
+          alt="puse-use-rofile picture"
+          className="w-[117px] rounded-full"
+        />
+      </div>
+
+      <div className="flex flex-col w-[480px] items-center text-white">
         <div className="flex justify-between w-full">
           <div className="text-left">
             <p className="text-bold">{props.developerResult.name}</p>
@@ -46,7 +49,7 @@ const SearchResult = (props: any) => {
             <p>Joined {formatDate(props.developerResult.created_at)}</p>
           </div>
         </div>
-        <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-center rounded-lg mt-8 p-6 w-full">
+        <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-start rounded-lg mt-8 py-[15px] px-[32px] w-full">
           <div>
             <p>Repos</p>
             <p className="font-bold">{props.developerResult.public_repos}</p>
@@ -60,10 +63,10 @@ const SearchResult = (props: any) => {
             <p className="font-bold">{props.developerResult.following}</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-x-20 gap-y-4 mt-6 text-left w-full">
-          <div className="flex">
+        <div className="grid grid-cols-2 gap-y-[19px] mt-6 text-left w-full">
+          <div className="flex gap-x-[16px]">
             <Location
-              className={`w-6 h-6 mr-2 text-red-500 ${
+              className={`w-[20px] text-red-500 ${
                 props.developerResult.location === null
                   ? "text-[#697C9A]"
                   : "text-white"
@@ -75,9 +78,9 @@ const SearchResult = (props: any) => {
               <p className="text-white">{notAvailable}</p>
             )}
           </div>
-          <div className="flex">
+          <div className="flex gap-x-[16px]">
             <Twitter
-              className={`h-6 w-6 mr-2 text-white-500 ${
+              className={`w-[20px] text-white-500 ${
                 props.developerResult.twitter_username === null
                   ? "text-[#697C9A]"
                   : "text-white"
@@ -89,9 +92,9 @@ const SearchResult = (props: any) => {
               <p className="text-slate-600">{notAvailable}</p>
             )}
           </div>
-          <div className="flex">
+          <div className="flex gap-x-[16px]">
             <Blog
-              className={`w-6 h-6 mr-2 text-gray-500 ${
+              className={`w-[20px] text-gray-500 ${
                 props.developerResult.blog === null
                   ? "text-[#697C9A]"
                   : "text-white"
@@ -103,9 +106,9 @@ const SearchResult = (props: any) => {
               <p className="text-slate-600">{notAvailable}</p>
             )}
           </div>
-          <div className="flex">
+          <div className="flex gap-x-[16px]">
             <Company
-              className={`w-6 h-6 mr-2 text-pink-500 ${
+              className={`w-[20px] text-pink-500 ${
                 props.developerResult.company === null
                   ? "text-[#697C9A]"
                   : "text-white"

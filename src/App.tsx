@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
-import LightIcon from "./assets/icon-sun.svg";
+import { ReactComponent as ThemeIcon } from "./assets/icon-sun.svg";
 import { GithubAPI } from "./api/GithubAPI";
 
 function App() {
@@ -42,11 +42,13 @@ function App() {
   return (
     <div className="bg-primary-blue flex justify-center">
       <div className="flex flex-col justify-center items-center h-screen w-3/6 bg-primary-blue max-w-screen">
-        <div className="w-full flex justify-between">
+        <div className="w-[730px] flex justify-between">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
-          <div className="flex mr-4 mb-12">
-            <span className="uppercase text-white font-bold">Light</span>
-            <img src={LightIcon} alt="" />
+          <div className="flex  mb-12">
+            <span className="uppercase text-white font-bold tracking-widest mr-2">
+              Light
+            </span>
+            <ThemeIcon className="w-6 h-6 ml-2 text-white" />
           </div>
         </div>
         <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
