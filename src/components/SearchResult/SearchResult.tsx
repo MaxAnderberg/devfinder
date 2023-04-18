@@ -9,13 +9,16 @@ const SearchResult = (props: any) => {
 
   return (
     <div className="md:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 mx-6">
-      <div className="grid grid-rows-3 grid-cols-1 w-full text-white ">
+      <div
+        className="grid grid-rows-3 grid-cols-1 w-full text-white "
+        style={{ gridTemplateRows: "auto 1fr auto" }}
+      >
         {/* First Section */}
         <div className="grid md:flex md:justify-between grid-rows-[auto,1fr] grid-cols-[1fr-auto] ">
           <UserHeader developerResult={props.developerResult} />
         </div>
         {/* Second Section */}
-        <div>
+        <div className="h-1/2">
           <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center">
             <div>
               <p className="text-xs mb-[8px]">Repos</p>
