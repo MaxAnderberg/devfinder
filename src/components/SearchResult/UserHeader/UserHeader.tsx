@@ -11,7 +11,7 @@ const UserHeader = (props: any) => {
   };
   return (
     <>
-      <div className="md:mr-8 row-start-1 row-end-1 w-24 col-span-1">
+      <div className="md:mr-8 row-start-1 row-end-1 col-span-1 mr-[20px]">
         <img
           src={props.developerResult.avatar_url}
           alt="user profile picture"
@@ -19,11 +19,13 @@ const UserHeader = (props: any) => {
         />
       </div>
       <div className="text-left row-start-1 row-end-1 col-span-2">
-        <p className="text-bold">{props.developerResult.name}</p>
-        <p className="color-blue mt-2 text-blue-600">
+        <p className="font-bold">{props.developerResult.name}</p>
+        <p className="color-blue text-blue-600 mb-1 text-sm">
           @{props.developerResult.login}
         </p>
-        <p>Joined {formatDate(props.developerResult.created_at)}</p>
+        <p className="text-sm">
+          Joined {formatDate(props.developerResult.created_at)}
+        </p>
       </div>
       <p className="min-h-[70px] col-span-3 text-left mt-[33px]">
         {props.developerResult.bio !== null
