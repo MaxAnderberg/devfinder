@@ -8,7 +8,7 @@ const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
 
   return (
-    <div className="md:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 mx-6">
+    <div className="md:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 w-[337px]">
       <div
         className="grid grid-rows-3 grid-cols-1 w-full text-white "
         style={{ gridTemplateRows: "auto 1fr auto" }}
@@ -18,8 +18,8 @@ const SearchResult = (props: any) => {
           <UserHeader developerResult={props.developerResult} />
         </div>
         {/* Second Section */}
-        <div className="h-1/2">
-          <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center">
+        <div>
+          <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px]">
             <div>
               <p className="text-xs mb-[8px]">Repos</p>
               <p className="font-bold text-center">
