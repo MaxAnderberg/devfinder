@@ -40,7 +40,7 @@ const SearchBar = (props: any) => {
         )}
         <button
           type="submit"
-          className="bg-button-blue h-[64px] w-[84px] rounded-xl text-white m-2 font-bold hover:bg-button-hover flex-none"
+          className="bg-button-blue h-[46px] w-[84px] rounded-xl text-white m-2 font-bold text-sm hover:bg-button-hover flex-none"
         >
           Search
         </button>
