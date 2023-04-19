@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="bg-primary-blue flex justify-center">
       <div className="flex flex-col md:justify-center items-start md:items-center h-screen md:w-3/6 bg-primary-blue sm:w-full">
-        <div className="md:w-[730px] flex justify-between w-[327px] md:bg-blue-500 mt-8">
+        <div className="lg:w-[730px] flex justify-between w-[327px] md:w-[573px] md:bg-blue-500 mt-8">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
           <div className="flex mb-12 text-white hover:text-[#90A4D4] cursor-pointer">
             <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1">

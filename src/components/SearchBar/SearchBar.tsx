@@ -16,7 +16,7 @@ const SearchBar = (props: any) => {
   };
 
   return (
-    <div className="bg-[#1E2A47] md:w-[730px] w-[337px] rounded-2xl">
+    <div className="bg-[#1E2A47] lg:w-[730px] md:w-[573px] w-[337px] rounded-2xl">
       <form onSubmit={handleSearch} className="flex">
         <div className="m-auto ml-4 md:ml-8">
           <SearchIcon
