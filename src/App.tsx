@@ -4,6 +4,7 @@ import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
 import { ReactComponent as ThemeIcon } from "./assets/icon-sun.svg";
 import { GithubAPI } from "./api/GithubAPI";
+import { mockData } from "./mockdata/developer-mock.js";
 
 function App() {
   // const [isDarkTheme, setDarkTheme] = useState(false)
@@ -11,8 +12,10 @@ function App() {
 
   const baseURL: string = "https://api.github.com/users/";
 
-  const [developer, setDeveloper] = useState("octocat");
+  const [developer, setDeveloper] = useState(mockData);
   const [error, setError] = useState(null);
+
+  const useMock = true;
 
   const searchDeveloperHandler = useCallback(async () => {
     try {
@@ -21,6 +24,12 @@ function App() {
         setHasSearch(false);
         throw new Error("Please enter a valid username");
       }
+
+      if (useMock) {
+        setDeveloper(mockData);
+        retrun;
+      }
+
       const response = await fetch(baseURL + developer);
       if (!response.ok) {
         throw new Error("Something went wrong!");
@@ -41,8 +50,8 @@ function App() {
 
   return (
     <div className="bg-primary-blue flex justify-center">
-      <div className="flex flex-col justify-center items-center h-screen w-3/6 bg-primary-blue max-w-screen">
-        <div className="w-[730px] flex justify-between">
+      <div className="flex flex-col md:justify-center items-start md:items-center h-screen md:w-3/6 bg-primary-blue sm:w-full">
+        <div className="md:w-[730px] flex justify-between w-[327px] md:bg-blue-500 mt-8">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
           <div className="flex mb-12 text-white hover:text-[#90A4D4] cursor-pointer">
             <span className="uppercase font-bold tracking-widest mr-2">
@@ -53,7 +62,6 @@ function App() {
         </div>
         <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
         <SearchResult developerResult={developer} />
-        <button onClick={searchDeveloperHandler}>Click me</button>
       </div>
     </div>
   );
