@@ -8,7 +8,7 @@ const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
 
   return (
-    <div className="md:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 w-[337px]">
+    <div className="md:flex bg-[#1E2A47] mt-8 md:mt-8 rounded-xl md:p-12 p-6 w-[337px]">
       <div
         className="grid grid-rows-3 grid-cols-1 w-full text-white "
         style={{ gridTemplateRows: "auto 1fr auto" }}
