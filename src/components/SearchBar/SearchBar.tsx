@@ -25,7 +25,7 @@ const SearchBar = (props: any) => {
           />
         </div>
         <input
-          className="rounded-lg py-4 md:p-4 border-0 w-full placeholder-white bg-[#1E2A47] text-white focus:ring-0 focus:outline-none text-xs ml-2"
+          className="rounded-lg py-4 md:p-4 border-0 w-full placeholder-white bg-[#1E2A47] text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
           type="text"
           placeholder="Search GitHub username..."
           onChange={handleInputChange}
@@ -40,7 +40,7 @@ const SearchBar = (props: any) => {
         )}
         <button
           type="submit"
-          className="bg-button-blue h-[46px] w-[84px] rounded-xl text-white m-2 font-bold text-sm hover:bg-button-hover flex-none"
+          className="bg-button-blue h-[46px] w-[84px] md:h-[50px] md:w-[106px] rounded-xl text-white m-2 font-bold text-sm hover:bg-button-hover flex-none md:text-base"
         >
           Search
         </button>
