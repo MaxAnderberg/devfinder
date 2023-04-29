@@ -18,12 +18,14 @@ const UserHeader = (props: any) => {
           className="md:w-[117px] w-[70px] rounded-full"
         />
       </div>
-      <div className="text-left row-start-1 row-end-1 col-span-2 md:ml-[-40px]">
-        <p className="font-bold md:text-2xl">{props.developerResult.name}</p>
+      <div className="text-left row-start-1 row-end-1 col-span-2 md:ml-[-40px] mt-5">
+        <p className="font-bold md:text-2xl mb-2">
+          {props.developerResult.name}
+        </p>
         <p className="color-blue text-blue-600 mb-1 text-sm md:text-base">
           @{props.developerResult.login}
         </p>
-        <p className="text-sm">
+        <p className="text-sm md:text-base">
           Joined {formatDate(props.developerResult.created_at)}
         </p>
       </div>
