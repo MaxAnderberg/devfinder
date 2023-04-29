@@ -11,7 +11,7 @@ const UserHeader = (props: any) => {
   };
   return (
     <>
-      <div className="lg:mr-8 row-start-1 row-end-1 col-span-1 mr-[20px] md:mr-0 md:w-[117px]">
+      <div className="lg:mr-8 row-start-1 row-end-1 col-span-1 mr-[20px] md:mr-0 md:w-[117px] ">
         <img
           src={props.developerResult.avatar_url}
           alt="user profile picture"
