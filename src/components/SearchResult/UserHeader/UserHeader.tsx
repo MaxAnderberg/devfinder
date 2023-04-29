@@ -11,16 +11,16 @@ const UserHeader = (props: any) => {
   };
   return (
     <>
-      <div className="lg:mr-8 row-start-1 row-end-1 col-span-1 mr-[20px]">
+      <div className="lg:mr-8 row-start-1 row-end-1 col-span-1 mr-[20px] md:mr-0 md:w-[117px]">
         <img
           src={props.developerResult.avatar_url}
           alt="user profile picture"
           className="md:w-[117px] w-[70px] rounded-full"
         />
       </div>
-      <div className="text-left row-start-1 row-end-1 col-span-2">
-        <p className="font-bold">{props.developerResult.name}</p>
-        <p className="color-blue text-blue-600 mb-1 text-sm">
+      <div className="text-left row-start-1 row-end-1 col-span-2 md:ml-[-40px]">
+        <p className="font-bold md:text-2xl">{props.developerResult.name}</p>
+        <p className="color-blue text-blue-600 mb-1 text-sm md:text-base">
           @{props.developerResult.login}
         </p>
         <p className="text-sm">

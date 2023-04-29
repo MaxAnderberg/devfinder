@@ -8,13 +8,13 @@ const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
 
   return (
-    <div className="md:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 w-[337px] md:w-[573px]">
+    <div className="lg:flex bg-[#1E2A47] mt-4 md:mt-8 rounded-xl md:p-12 p-6 w-[337px] md:w-[573px]">
       <div
         className="grid grid-rows-3 grid-cols-1 w-full text-white "
         style={{ gridTemplateRows: "auto 1fr auto" }}
       >
         {/* First Section */}
-        <div className="grid lg:flex md:justify-between grid-rows-[auto,1fr] grid-cols-[1fr-auto] lg:mb-8">
+        <div className="grid lg:flex lg:justify-between grid-rows-[auto,1fr] md:grid-cols-[1fr-auto] grid-cols-[1fr-auto] lg:mb-8">
           <UserHeader developerResult={props.developerResult} />
         </div>
         {/* Second Section */}
