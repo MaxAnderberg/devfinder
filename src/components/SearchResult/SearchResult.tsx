@@ -14,12 +14,12 @@ const SearchResult = (props: any) => {
         style={{ gridTemplateRows: "auto 1fr auto" }}
       >
         {/* First Section */}
-        <div className="grid lg:flex lg:justify-between grid-rows-[auto,1fr] md:grid-cols-[1fr-auto] grid-cols-[1fr-auto] lg:mb-8">
+        <div className="grid  grid-rows-[auto,1fr] md:grid-cols-[1fr-auto] lg:grid-cols-[0.5fr,2fr,auto] lg:mb-0  ">
           <UserHeader developerResult={props.developerResult} />
         </div>
         {/* Second Section */}
         <div>
-          <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px]">
+          <div className="bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px] lg:row-start-1 lg:row-end-1 lg:w-[480px] lg:ml-[162px] lg:mt-[-15px]">
             <div>
               <p className="text-xs mb-[8px]">Repos</p>
               <p className="font-bold text-center">
@@ -37,8 +37,8 @@ const SearchResult = (props: any) => {
           </div>
         </div>
         {/* Third Section */}
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[19px] text-left w-full">
+        <div className="">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[19px] text-left w-full lg:row-start-1 lg:ml-[162px]">
             <div className="flex gap-x-[16px]">
               <Location
                 className={`w-[20px] text-red-500 ${
@@ -53,7 +53,7 @@ const SearchResult = (props: any) => {
                 <p className="text-white">{notAvailable}</p>
               )}
             </div>
-            <div className="flex gap-x-[16px]">
+            <div className="flex gap-x-[16px] lg:ml-[-10px]">
               <Twitter
                 className={`w-[20px] text-white-500 ${
                   props.developerResult.twitter_username === null
@@ -67,7 +67,7 @@ const SearchResult = (props: any) => {
                 <p className="text-slate-600">{notAvailable}</p>
               )}
             </div>
-            <div className="flex gap-x-[16px]">
+            <div className="flex gap-x-[16px] ">
               <Blog
                 className={`w-[20px] text-gray-500 ${
                   props.developerResult.blog === null
@@ -81,7 +81,7 @@ const SearchResult = (props: any) => {
                 <p className="text-slate-600">{notAvailable}</p>
               )}
             </div>
-            <div className="flex gap-x-[16px]">
+            <div className="flex gap-x-[16px] lg:ml-[-10px]">
               <Company
                 className={`w-[20px] text-pink-500 ${
                   props.developerResult.company === null
