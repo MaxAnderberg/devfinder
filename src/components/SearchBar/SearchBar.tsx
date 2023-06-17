@@ -16,7 +16,7 @@ const SearchBar = (props: any) => {
   };
 
   return (
-    <div className="bg-primary-white lg:w-[730px] md:w-[573px] w-[337px] rounded-2xl dark:bg-dark-primary">
+    <div className="bg-primary-white lg:w-[730px] md:w-[573px] w-[337px] rounded-2xl dark:bg-dark-secondary">
       <form onSubmit={handleSearch} className="flex">
         <div className="m-auto ml-4 md:ml-8">
           <SearchIcon
@@ -25,7 +25,7 @@ const SearchBar = (props: any) => {
           />
         </div>
         <input
-          className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white dark:bg-dark-primary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
+          className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
           type="text"
           placeholder="Search GitHub username..."
           onChange={handleInputChange}
