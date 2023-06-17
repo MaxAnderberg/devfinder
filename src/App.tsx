@@ -62,7 +62,7 @@ function App() {
   }
 
   return (
-    <div className="bg-[#F6F8FF] flex justify-center dark:bg-dark-primary-blue">
+    <div className="bg-[#F6F8FF] flex justify-center dark:bg-dark-primary">
       <div className="flex flex-col md:justify-center items-start md:items-center h-screen md:w-3/6 bg-primary-blue sm:w-full">
         <div className="lg:w-[730px] flex justify-between w-[327px] md:w-[573px]  mt-8">
           <p className="lowercase text-[#222731] dark:text-white font-bold text-2xl">Devfinder</p>

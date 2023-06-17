@@ -2,7 +2,7 @@ import { ReactComponent as Location } from "../../assets/icon-location.svg";
 import { ReactComponent as Blog } from "../../assets/icon-website.svg";
 import { ReactComponent as Twitter } from "../../assets/icon-twitter.svg";
 import { ReactComponent as Company } from "../../assets/icon-company.svg";
-import UserHeader from "./UserHeader/UserHeader.tsx";
+import UserHeader from "./UserHeader/UserHeader";
 
 const SearchResult = (props: any) => {
   const notAvailable = "Not Available";
@@ -21,18 +21,18 @@ const SearchResult = (props: any) => {
         <div>
           <div className="bg-[#F6F8FF] dark:bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px] lg:row-start-1 lg:row-end-1 lg:w-[480px] lg:ml-[162px] lg:mt-[-15px]">
             <div>
-              <p className="text-xs mb-[8px] text-[#4B6A9B]">Repos</p>
-              <p className="font-bold text-center text-[22px] text-[#2B3442]">
+              <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Repos</p>
+              <p className="font-bold text-center text-[22px] text-[#2B3442] dark:text-white">
                 {props.developerResult.public_repos}
               </p>
             </div>
             <div>
-              <p className="text-xs mb-[8px] text-[#4B6A9B]">Followers</p>
-              <p className="font-bold text-[22px] text-[#2B3442]">{props.developerResult.followers}</p>
+              <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Followers</p>
+              <p className="font-bold text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.followers}</p>
             </div>
             <div>
-              <p className="text-xs mb-[8px] text-[#4B6A9B]">Following</p>
-              <p className="font-bold text-[22px] text-[#2B3442]">{props.developerResult.following}</p>
+              <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Following</p>
+              <p className="font-bold text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.following}</p>
             </div>
           </div>
         </div>
@@ -44,11 +44,11 @@ const SearchResult = (props: any) => {
                 className={`w-[20px] text-red-500 ${
                   props.developerResult.location === null
                     ? "text-[#697C9A] text-opacity-50"
-                    : "text-[#4B6A9B]"
+                    : "text-[#4B6A9B] dark:text-white"
                 }`}
               />
               {props.developerResult.location !== null ? (
-                <p className="text-[#4B6A9B]">{props.developerResult.location}</p>
+                <p className="text-[#4B6A9B] dark:text-[#FFFFFF]">{props.developerResult.location}</p>
               ) : (
                 <p className="text-white text-opacity-50">{notAvailable}</p>
               )}
@@ -58,11 +58,11 @@ const SearchResult = (props: any) => {
                 className={`w-[20px] text-white-500 ${
                   props.developerResult.twitter_username === null
                     ? "text-[#4B6A9B] text-opacity-50"
-                    : "text-[#4B6A9B]"
+                    : "text-[#4B6A9B] dark:text-white"
                 }`}
               />
               {props.developerResult.twitter_username !== null ? (
-                <p className="text-[#4B6A9B]">{props.developerResult.twitter_username}</p>
+                <p className="text-[#4B6A9B] dark:text-[#FFFFFF]">{props.developerResult.twitter_username}</p>
               ) : (
                 <p className="text-[#4B6A9B] text-opacity-50">{notAvailable}</p>
               )}
@@ -76,7 +76,7 @@ const SearchResult = (props: any) => {
                 }`}
               />
               {props.developerResult.blog !== null ? (
-                <p className="text-[#4B6A9B]">{props.developerResult.blog}</p>
+                <p className="text-[#4B6A9B] dark:text-[#FFFFFF]">{props.developerResult.blog}</p>
               ) : (
                 <p className="text-[#4B6A9B] text-opacity-50 ">{notAvailable}</p>
               )}
@@ -86,11 +86,11 @@ const SearchResult = (props: any) => {
                 className={`w-[20px] text-[#4B6A9B] ${
                   props.developerResult.company === null
                     ? "text-[#697C9A]"
-                    : "text-[#4B6A9B]"
+                    : "text-[#4B6A9B] dark:text-white"
                 }`}
               />
               {props.developerResult.company !== null ? (
-                <p className="text-[#4B6A9B]">{props.developerResult.company}</p>
+                <p className="text-[#4B6A9B] dark:text-[#FFFFFF]">{props.developerResult.company}</p>
               ) : (
                 <p className="text-[#4B6A9B] text-opacity-50">{notAvailable}</p>
               )}
