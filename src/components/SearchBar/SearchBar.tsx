@@ -25,7 +25,7 @@ const SearchBar = (props: any) => {
           />
         </div>
         <input
-          className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
+          className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white cursor-pointer dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
           type="text"
           placeholder="Search GitHub username..."
           onChange={handleInputChange}
