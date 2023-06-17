@@ -2,8 +2,8 @@ import { useState, useCallback, useEffect } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
-import { ReactComponent as ThemeIcon } from "./assets/icon-sun.svg";
-import { GithubAPI } from "./api/GithubAPI";
+import  ThemeIcon from "./assets/IconSun";
+//import { GithubAPI } from "./api/GithubAPI";
 import { mockData } from "./mockdata/developer-mock.js";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
       if (useMock) {
         setDeveloper(mockData);
-        retrun;
+        return;
       }
 
       const response = await fetch(baseURL + developer);
@@ -60,15 +60,15 @@ function App() {
   }
 
   return (
-    <div className="bg-primary-blue flex justify-center dark:bg-dark-primary-blue">
+    <div className="bg-gray-300 flex justify-center dark:bg-dark-primary-blue">
       <div className="flex flex-col md:justify-center items-start md:items-center h-screen md:w-3/6 bg-primary-blue sm:w-full">
-        <div className="lg:w-[730px] flex justify-between w-[327px] md:w-[573px] md:bg-blue-500 mt-8">
+        <div className="lg:w-[730px] flex justify-between w-[327px] md:w-[573px]  mt-8">
           <p className="lowercase text-white font-bold text-2xl">Devfinder</p>
           <div className="flex mb-12 text-white hover:text-[#90A4D4] cursor-pointer" onClick={() => handleDarkMode()}>
             <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1">
               Light
             </span>
-            <ThemeIcon className="w-6 h-6 ml-2 mt-1" />
+            <ThemeIcon tailWindClass="w-6 h-6 ml-2 mt-1" />
           </div>
         </div>
         <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
