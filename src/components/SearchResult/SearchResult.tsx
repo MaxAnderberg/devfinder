@@ -22,17 +22,17 @@ const SearchResult = (props: any) => {
           <div className="bg-[#F6F8FF] dark:bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px] lg:row-start-1 lg:row-end-1 lg:w-[480px] lg:ml-[162px] lg:mt-[-15px]">
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B]">Repos</p>
-              <p className="font-bold text-center text-[#2B3442]">
+              <p className="font-bold text-center text-[22px] text-[#2B3442]">
                 {props.developerResult.public_repos}
               </p>
             </div>
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B]">Followers</p>
-              <p className="font-bold text-[#2B3442]">{props.developerResult.followers}</p>
+              <p className="font-bold text-[22px] text-[#2B3442]">{props.developerResult.followers}</p>
             </div>
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B]">Following</p>
-              <p className="font-bold text-[#2B3442]">{props.developerResult.following}</p>
+              <p className="font-bold text-[22px] text-[#2B3442]">{props.developerResult.following}</p>
             </div>
           </div>
         </div>
