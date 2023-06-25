@@ -19,20 +19,20 @@ const SearchResult = (props: any) => {
         </div>
         {/* Second Section */}
         <div>
-          <div className="bg-[#F6F8FF] dark:bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-center rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px] lg:row-start-1 lg:row-end-1 lg:w-[480px] lg:ml-[162px] lg:mt-[-15px]">
+          <div className="md:pl-[32px] md:pb-[17px] bg-[#F6F8FF] dark:bg-[#141D2F] grid grid-rows-1 grid-cols-3 justify-items-start md:text-left rounded-lg py-[15px] px-[15px] w-full justify-self-center align-self-center mb-[24px] mb:w-[493px] lg:row-start-1 lg:row-end-1 lg:w-[480px] lg:ml-[162px] lg:mt-[-15px]">
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Repos</p>
-              <p className="font-bold text-center text-[22px] text-[#2B3442] dark:text-white">
+              <p className="font-bold sm:text-center md:text-left sm:text-base md:text-[22px] text-[#2B3442] dark:text-white">
                 {props.developerResult.public_repos}
               </p>
             </div>
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Followers</p>
-              <p className="font-bold text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.followers}</p>
+              <p className="font-bold sm:text-base md:text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.followers}</p>
             </div>
             <div>
               <p className="text-xs mb-[8px] text-[#4B6A9B] dark:text-[#FFFFFF]">Following</p>
-              <p className="font-bold text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.following}</p>
+              <p className="font-bold sm:text-base md:text-[22px] text-[#2B3442] dark:text-white">{props.developerResult.following}</p>
             </div>
           </div>
         </div>

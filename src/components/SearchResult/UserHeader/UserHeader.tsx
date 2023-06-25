@@ -29,7 +29,7 @@ const UserHeader = (props: any) => {
           Joined {formatDate(props.developerResult.created_at)}
         </p>
       </div>
-      <p className={`min-h-[70px] 4ol-span-3 lg:col-span-1 lg:row-start-3 lg:row-end-3 lg:col-start-2 lg:col-end-3 text-left mt-[33px] lg:mt-[0px] lg:ml-[37px] lg:mt-[-28px] ${props.developerResult.bio === null ? "text-[#4B6A9B] dark:text-[#697C9A] text-opacity-75" : "text-[#4B6A9B] dark:text-white"}`}>
+      <p className={`min-h-[70px] col-span-3 lg:col-span-1 lg:row-start-3 lg:row-end-3 lg:col-start-2 lg:col-end-3 text-left mt-[33px] lg:mt-[0px] lg:ml-[37px] lg:mt-[-28px] ${props.developerResult.bio === null ? "text-[#4B6A9B] dark:text-[#697C9A] text-opacity-75" : "text-[#4B6A9B] dark:text-white"}`}>
         {props.developerResult.bio !== null
           ? props.developerResult.bio
           : "This profile has no bio"}
