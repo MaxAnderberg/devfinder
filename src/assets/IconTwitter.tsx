@@ -3,7 +3,7 @@ type Props = {
 }
 export default function IconTwitter ({
   tailWindClass,
-                                     }:Props ):JSX.Element {
+  }:Props ):JSX.Element {
   return (
     <svg
       height="18"
