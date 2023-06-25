@@ -1,7 +1,7 @@
 import  Location  from "../../assets/IconLocation";
-import { ReactComponent as Blog } from "../../assets/icon-website.svg";
-import { ReactComponent as Twitter } from "../../assets/icon-twitter.svg";
-import { ReactComponent as Company } from "../../assets/icon-company.svg";
+import  Blog from "../../assets/IconBlog";
+import  Twitter from "../../assets/IconTwitter";
+import  Company from "../../assets/IconCompany";
 import UserHeader from "./UserHeader/UserHeader";
 
 const SearchResult = (props: any) => {
@@ -41,7 +41,7 @@ const SearchResult = (props: any) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[19px] text-left w-full lg:row-start-1 lg:ml-[162px]">
             <div className="flex gap-x-[16px]">
               <Location
-                className={`w-[20px] text-red-500 ${
+                tailWindClass={`w-[20px] ${
                   props.developerResult.location === null
                     ? "text-[#697C9A] text-opacity-50"
                     : "text-[#4B6A9B] dark:text-white"
@@ -55,7 +55,7 @@ const SearchResult = (props: any) => {
             </div>
             <div className="flex gap-x-[16px] lg:ml-[-10px]">
               <Twitter
-                className={`w-[20px] text-white-500 ${
+                tailWindClass={`w-[20px] text-white-500 ${
                   props.developerResult.twitter_username === null
                     ? "text-[#4B6A9B] text-opacity-50"
                     : "text-[#4B6A9B] dark:text-white"
@@ -69,7 +69,7 @@ const SearchResult = (props: any) => {
             </div>
             <div className="flex gap-x-[16px] ">
               <Blog
-                className={`w-[20px] text-gray-500 ${
+                tailWindClass={`w-[20px] ${
                   props.developerResult.blog === null
                     ? "text-[#4B6A9B] dark:text-[#697C9A]"
                     : "text-[#4B6A9B] dark:text-white"
@@ -83,7 +83,7 @@ const SearchResult = (props: any) => {
             </div>
             <div className="flex gap-x-[16px] lg:ml-[-10px]">
               <Company
-                className={`w-[20px] text-[#4B6A9B] ${
+                tailWindClass={`w-[20px]  ${
                   props.developerResult.company === null
                     ? "text-[#697C9A]"
                     : "text-[#4B6A9B] dark:text-white"
