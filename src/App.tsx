@@ -2,13 +2,13 @@ import { useState, useCallback, useEffect } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
-import  ThemeIcon from "./assets/IconSun";
+import ThemeIcon from "./assets/IconSun";
 import MoonIcon from "./assets/IconMoon";
 //import { GithubAPI } from "./api/GithubAPI";
 import { mockData } from "./mockdata/developer-mock.js";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
   const [foundSearch, setHasSearch] = useState(true);
 
   const baseURL: string = "https://api.github.com/users/";
@@ -51,28 +51,35 @@ function App() {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark')
-    }  else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   const handleDarkMode = () => {
-   setDarkMode(!darkMode)
-  }
+    setDarkMode(!darkMode);
+  };
 
   return (
     <div className="bg-[#F6F8FF] flex justify-center dark:bg-dark-primary">
       <div className="flex flex-col md:justify-center items-start md:items-center h-screen md:w-3/6 bg-primary-blue sm:w-full">
         <div className="lg:w-[730px] flex justify-between w-[327px] md:w-[573px] mt-8">
-          <p className="lowercase text-[#222731] dark:text-white font-bold text-2xl">Devfinder</p>
-          <div className="flex text-[#697C9A] dark:text-white mb-[36px] hover:text-[#90A4D4] cursor-pointer" onClick={() => handleDarkMode()}>
+          <p className="lowercase text-[#222731] dark:text-white font-bold text-2xl">
+            Devfinder
+          </p>
+          <div
+            className="flex text-[#697C9A] dark:text-white mb-[36px] hover:text-[#90A4D4] cursor-pointer"
+            onClick={() => handleDarkMode()}
+          >
             <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1">
-              {darkMode ? 'Light' : 'Dark'}
+              {darkMode ? "Light" : "Dark"}
             </span>
-            {darkMode ? 
-             <ThemeIcon tailWindClass="w-6 h-6 ml-2 mt-1" /> :
-             <MoonIcon tailWindClass="w-6 h-6 ml-2 mt-1" />}
+            {darkMode ? (
+              <ThemeIcon tailWindClass="w-6 h-6 ml-2 mt-1" />
+            ) : (
+              <MoonIcon tailWindClass="w-6 h-6 ml-2 mt-1" />
+            )}
           </div>
         </div>
         <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
