@@ -14,14 +14,17 @@ function App() {
   const baseURL: string = "https://api.github.com/users/";
 
   const [developer, setDeveloper] = useState(mockData);
+  const [searchInput, setSearchInput] = useState('');
+
   const [error, setError] = useState(null);
 
-  const useMock = true;
+  const useMock = false;
 
   const searchDeveloperHandler = useCallback(async () => {
     try {
       setError(null);
-      if (developer.length === 0) {
+      console.log(searchInput)
+      if (searchInput.length === 0) {
         setHasSearch(false);
         throw new Error("Please enter a valid username");
       }
@@ -31,19 +34,20 @@ function App() {
         return;
       }
 
-      const response = await fetch(baseURL + developer);
+      const response = await fetch(baseURL + searchInput);
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
 
       const data = await response.json();
-
       setDeveloper(data);
       setHasSearch(true);
     } catch (error: any) {
+      setHasSearch(false)
       setError(error.message);
+
     }
-  }, [developer]);
+  }, [searchInput]);
 
   useEffect(() => {
     searchDeveloperHandler();
@@ -82,7 +86,7 @@ function App() {
             )}
           </div>
         </div>
-        <SearchBar setSearchDev={setDeveloper} foundSearch={foundSearch} />
+        <SearchBar setSearchDev={setSearchInput} foundSearch={foundSearch} />
         <SearchResult developerResult={developer} />
       </div>
     </div>
