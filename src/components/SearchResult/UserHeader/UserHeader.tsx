@@ -19,13 +19,13 @@ const UserHeader = (props: any) => {
         />
       </div>
       <div className="text-left row-start-1 row-end-1 col-span-2 lg:col-start-2 lg:col-end-3 lg:col-span-2 md:ml-[-40px] lg: lg:ml-[37px] md:mt-5 lg:mt-0 lg:grid lg:grid-cols-2 lg:grid-rows-[0.5fr,0.25fr]">
-        <p className="text-[#2B3442] dark:text-white font-bold md:text-2xl mb-2 lg:mt-2 ">
+        <p className="text-secondary-gray dark:text-white font-bold md:text-2xl mb-2 lg:mt-2 ">
           {props.developerResult.name}
         </p>
         <p className="color-blue text-blue-600 mb-1 text-sm md:text-base lg:row-start-2 lg:row-end-2 lg:mt-[-15px]">
           @{props.developerResult.login}
         </p>
-        <p className="text-[#697C9A] dark:text-white text-sm md:text-base lg:mb-2 lg:mt-2 justify-self-end">
+        <p className="text-dark-white-secondary dark:text-white text-sm md:text-base lg:mb-2 lg:mt-2 justify-self-end">
           Joined {formatDate(props.developerResult.created_at)}
         </p>
       </div>

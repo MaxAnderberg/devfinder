@@ -20,7 +20,7 @@ const SearchBar = (props: any) => {
     <div className="shadow-lg bg-primary-white lg:w-[730px] md:w-[573px] w-[337px] rounded-2xl dark:bg-dark-secondary">
       <form onSubmit={handleSearch} className="flex">
         <div className="m-auto ml-4 md:ml-8">
-          <SearchIcon tailWindClass="text-[#0079FF] w-[24px] h-[24px]"/>
+          <SearchIcon tailWindClass="text-button-blue w-[24px] h-[24px]"/>
         </div>
         <input
           className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white cursor-pointer dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"

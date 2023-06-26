@@ -6,13 +6,16 @@ module.exports = {
       colors:{
         'primary-gray': "#F6F8FF",
         'primary-white': "#FEFEFE",
+        'secondary-gray': "#2B3442",
+        'secondary-white': "#4B6A9B",
         'button-blue': "#0079FF",
         'button-hover': "#60ABFF",
         'dark-primary': "#141D2F",
+        'dark-accent': "#222731",
         'dark-secondary': "#1E2A47",
+        'dark-white-secondary': "#697C9A",
         'dark-white': "#FEFEFE",
-        'dark-button-blue': "#YourDarkButtonBlue",
-        'dark-button-hover': "#YourDarkButtonHover",
+        'button-hover': "#90A4D4",
       }
     },
   },
