@@ -5,7 +5,7 @@ import Company from "../../assets/IconCompany";
 
 export default function UserLinks(props: { developerResult: any }) {
   const notAvailable = "Not Available";
-  return <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[19px] text-left w-full lg:row-start-1 lg:ml-[162px]">
+  return <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[19px] text-left w-full lg:row-start-1 lg:ml-[162px] max-w-[480px]">
     <div className="flex gap-x-[6px]">
       <Location
         tailWindClass={`w-[30px] ${
@@ -20,7 +20,7 @@ export default function UserLinks(props: { developerResult: any }) {
         <p className="text-white text-opacity-50 text-sm">{notAvailable}</p>
       )}
     </div>
-    <div className="flex gap-x-[6px] lg:ml-[-10px]">
+    <div className="flex gap-x-[6px] md:ml-[10px]">
       <Twitter
         tailWindClass={`w-[30px] text-white-500 md:ml-[15px] ${
           props.developerResult.twitter_username === null
@@ -34,7 +34,7 @@ export default function UserLinks(props: { developerResult: any }) {
         <p className="text-secondary-white text-opacity-50 text-sm">{notAvailable}</p>
       )}
     </div>
-    <div className="flex gap-x-[6px] justify-start">
+    <div className="flex gap-x-[6px]">
       <Blog
         tailWindClass={`w-[30px] ${
           props.developerResult.blog === null
@@ -43,12 +43,12 @@ export default function UserLinks(props: { developerResult: any }) {
         }`}
       />
       {props.developerResult.blog !== null ? (
-        <p className="ml-[16px]md:ml-[10px] text-secondary-white dark:text-white text-sm break-all">{props.developerResult.blog}</p>
+        <p className="max-w-[210px] text-secondary-white dark:text-white text-sm break-all">{props.developerResult.blog}</p>
       ) : (
         <p className="text-secondary-white text-opacity-50 text-sm">{notAvailable}</p>
       )}
     </div>
-    <div className="flex gap-x-[6px] lg:ml-[-10px]">
+    <div className="flex gap-x-[6px] md:ml-[10px]">
       <Company
         tailWindClass={`w-[30px] md:ml-[15px] ${
           props.developerResult.company === null
