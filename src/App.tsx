@@ -16,7 +16,7 @@ function App() {
   const [developer, setDeveloper] = useState(mockData);
   const [searchInput, setSearchInput] = useState('');
 
-  const [error, setError] = useState(null);
+  const [errorMessage, setError] = useState(null);
 
   const useMock = false;
 
@@ -44,7 +44,7 @@ function App() {
     } catch (error: any) {
       setHasSearch(false)
       setError(error.message);
-
+      console.log(errorMessage);
     }
   }, [searchInput]);
 
