@@ -23,7 +23,7 @@ const SearchBar = (props: any) => {
           <SearchIcon tailWindClass="text-button-blue w-[24px] h-[24px]"/>
         </div>
         <input
-          className="rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white cursor-pointer dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-lg ml-2"
+          className="mr-[5px] rounded-lg py-4 md:p-4 border-0 w-full dark:placeholder-white cursor-pointer dark:bg-dark-secondary dark:text-white focus:ring-0 focus:outline-none text-xs md:text-[16px] ml-2"
           type="text"
           placeholder="Search GitHub username..."
           onChange={handleInputChange}
@@ -32,8 +32,8 @@ const SearchBar = (props: any) => {
         {props.foundSearch ? (
           <p></p>
         ) : (
-          <div className="flex justify-end items-center w-1/3">
-            <p className="text-red-500">No results</p>
+          <div className="flex justify-end items-center w-4/5 md:w-1/3">
+            <p className="text-red-500 text-xs md:text-sm mr-[8px] md:mr-[5px] lg:mr-[24px]">No results</p>
           </div>
         )}
         <button
