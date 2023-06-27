@@ -1,7 +1,7 @@
 export const mockData = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
   bio: null,
-  blog: "https://github.blog",
+  blog: "http://www.123inkcartridges.ca",
   company: "@github",
   created_at: "2011-01-25T18:44:36Z",
   email: null,
