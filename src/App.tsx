@@ -23,7 +23,6 @@ function App() {
   const searchDeveloperHandler = useCallback(async () => {
     try {
       setError(null);
-      console.log(searchInput)
       if (searchInput.length === 0) {
         setHasSearch(false);
         throw new Error("Please enter a valid username");
