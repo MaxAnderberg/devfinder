@@ -4,7 +4,6 @@ import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
 import ThemeIcon from "./assets/IconSun";
 import MoonIcon from "./assets/IconMoon";
-//import { GithubAPI } from "./api/GithubAPI";
 import { mockData } from "./mockdata/developer-mock.js";
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
   const baseURL: string = "https://api.github.com/users/";
 
   const [developer, setDeveloper] = useState(mockData);
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState('OctoCat');
 
   const [errorMessage, setError] = useState(null);
 
