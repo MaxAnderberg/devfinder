@@ -17,7 +17,7 @@ function App() {
 
   const [errorMessage, setError] = useState(null);
 
-  const useMock = false;
+  const useMock = true;
 
   const searchDeveloperHandler = useCallback(async () => {
     try {
@@ -58,9 +58,22 @@ function App() {
     }
   }, [darkMode]);
 
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode);
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode) {
+      setDarkMode(savedDarkMode === 'true');
+    } else {
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(prefersDarkMode);
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem('darkMode', newDarkMode.toString());
   };
+
 
   return (
     <div className="bg-primary-gray flex justify-center dark:bg-dark-primary">
@@ -71,7 +84,7 @@ function App() {
           </p>
           <div
             className="flex text-dark-white-secondary dark:text-white mb-[36px] hover:text-button-hover dark:hover:text-button-hover cursor-pointer transform translateZ(0) "
-            onClick={() => handleDarkMode()}
+            onClick={() => toggleDarkMode()}
           >
             <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1 transition-colors duration-75 will-change-transform">
               {darkMode ? "Light" : "Dark"}
