@@ -71,7 +71,7 @@ function App() {
             Devfinder
           </p>
           <div
-            className="flex text-dark-white-secondary dark:text-white mb-[36px] hover:text-button-hover cursor-pointer"
+            className="flex text-dark-white-secondary dark:text-white mb-[36px] hover:text-button-hover dark:hover:text-button-hover cursor-pointer"
             onClick={() => handleDarkMode()}
           >
             <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1">
