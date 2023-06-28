@@ -44,7 +44,6 @@ function App() {
     } catch (error: any) {
       setHasSearch(false)
       setError(error.message);
-      console.log(errorMessage);
     }
   }, [searchInput]);
 
