@@ -71,16 +71,16 @@ function App() {
             Devfinder
           </p>
           <div
-            className="flex text-dark-white-secondary dark:text-white mb-[36px] hover:text-button-hover dark:hover:text-button-hover cursor-pointer"
+            className="flex text-dark-white-secondary dark:text-white mb-[36px] hover:text-button-hover dark:hover:text-button-hover cursor-pointer transform translateZ(0) "
             onClick={() => handleDarkMode()}
           >
-            <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1">
+            <span className="uppercase font-bold tracking-[2.5px] mr-2 text-sm mt-1 transition-colors duration-75 will-change-transform">
               {darkMode ? "Light" : "Dark"}
             </span>
             {darkMode ? (
-              <ThemeIcon tailWindClass="w-6 h-6 ml-2 mt-1" />
+              <ThemeIcon tailWindClass="w-6 h-6 ml-2 mt-1 transition-colors duration-75 will-change-transform" />
             ) : (
-              <MoonIcon tailWindClass="w-6 h-6 ml-2 mt-1" />
+              <MoonIcon tailWindClass="w-6 h-6 ml-2 mt-1 transition-colors duration-75 will-change-transform" />
             )}
           </div>
         </div>

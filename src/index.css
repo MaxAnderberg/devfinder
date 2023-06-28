@@ -9,5 +9,8 @@
   max-width: 100%;
 }
 body * {
-  @apply transition-colors duration-75;
+  @apply transition-colors;
+  transition-duration: 70ms;
+  transform: translateZ(0);
+  will-change: transform
 }
