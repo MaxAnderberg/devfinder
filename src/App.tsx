@@ -35,7 +35,7 @@ function App() {
 
       const response = await fetch(baseURL + searchInput);
       if (!response.ok) {
-        throw new Error("Something went wrong!");
+        throw new Error(`Request failed with status code: ${response.status}`);
       }
 
       const data = await response.json();
