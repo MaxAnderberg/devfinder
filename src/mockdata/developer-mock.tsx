@@ -1,4 +1,5 @@
-export const mockData = {
+import DeveloperData from '../types'
+export const mockData :DeveloperData = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
   bio: null,
   blog: "http://www.123inkcartridges.ca",

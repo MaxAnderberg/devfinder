@@ -4,20 +4,23 @@ import SearchResult from "./components/SearchResult/SearchResult";
 import "./App.css";
 import ThemeIcon from "./assets/IconSun";
 import MoonIcon from "./assets/IconMoon";
-import { mockData } from "./mockdata/developer-mock.js";
+import { mockData } from "./mockdata/developer-mock";
+import DeveloperData from "./types";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [foundSearch, setHasSearch] = useState(true);
+
+
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [foundSearch, setHasSearch] = useState<boolean>(true);
 
   const baseURL: string = "https://api.github.com/users/";
 
-  const [developer, setDeveloper] = useState(mockData);
-  const [searchInput, setSearchInput] = useState('OctoCat');
+  const [developer, setDeveloper] = useState<DeveloperData>(mockData);
+  const [searchInput, setSearchInput] = useState<string>('OctoCat');
 
-  const [errorMessage, setError] = useState(null);
+  const [errorMessage, setError] = useState<string|null>(null);
 
-  const useMock = true;
+  const useMock = false;
 
   const searchDeveloperHandler = useCallback(async () => {
     try {
@@ -37,7 +40,7 @@ function App() {
         throw new Error(`Request failed with status code: ${response.status}`);
       }
 
-      const data = await response.json();
+      const data = await response.json() as DeveloperData;
       setDeveloper(data);
       setHasSearch(true);
     } catch (error: any) {
